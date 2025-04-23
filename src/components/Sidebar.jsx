@@ -11,7 +11,7 @@ const Sidebar = () => {
         <ul className="flex flex-col">
           <li className="flex items-center space-x-2 p-2 bg-[#7081C7] text-white rounded">
             <FaTachometerAlt /> <span>Dashboard</span>
-          </li>
+          </li> 
           <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded cursor-pointer">
             <FaUserGraduate /> <span>Student</span>
           </li>
