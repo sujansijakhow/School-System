@@ -12,7 +12,7 @@ function App() {
         <div className='flex'>
 
           <Sidebar />
-          <div className='flex flex-col gap-10'>
+          <div className='flex flex-col gap-4 ml-60'>
 
             <Navbar />
             <HomeHeroSec />
