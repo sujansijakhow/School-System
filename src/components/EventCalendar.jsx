@@ -34,15 +34,15 @@ const EventCalendar = () => {
 
   return (
     // <div className="flex justify-center items-start min-h-[400px] bg-gray-100 p-6">
-      <div className="bg-[#D9D9D9] rounded-xl w-[700px] p-8 flex flex-col md:flex-row gap-8">
+      <div className="bg-[#D9D9D9] rounded-xl w-[700px] h-[300px] p-4 flex flex-col md:flex-row gap-8">
         
         {/* Calendar Section */}
         <div className="flex-1">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-800">Events Calendar</h2>
+          <div className="flex justify-between items-center mb-2">
+            <h2 className="text-[17px] font-bold text-gray-800">Events Calendar</h2>
             <div className="flex items-center gap-4">
               <button onClick={handlePrevMonth} className="text-gray-600 text-xl hover:text-gray-800">&lt;</button>
-              <span className="text-lg font-semibold text-gray-700">
+              <span className="text-sm font-semibold text-gray-700">
                 {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
               </span>
               <button onClick={handleNextMonth} className="text-gray-600 text-xl hover:text-gray-800">&gt;</button>
@@ -50,14 +50,14 @@ const EventCalendar = () => {
           </div>
 
           {/* Days Header */}
-          <div className="grid grid-cols-7 text-center mb-2">
+          <div className="grid grid-cols-7 text-center mb-1">
             {days.map((day) => (
               <div key={day} className="text-gray-600 font-semibold">{day}</div>
             ))}
           </div>
 
           {/* Calendar Days */}
-          <div className="grid grid-cols-7 text-center gap-2">
+          <div className="grid grid-cols-7 text-center">
             {/* Empty boxes before first day */}
             {Array.from({ length: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay() }).map((_, idx) => (
               <div key={`empty-${idx}`} />
