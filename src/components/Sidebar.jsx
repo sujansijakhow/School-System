@@ -3,7 +3,7 @@ import { FaTachometerAlt, FaUserGraduate, FaChalkboardTeacher, FaUserCheck, FaCl
 
 const Sidebar = () => {
   return (
-    <div className="w-60 h-[580px] bg-[#B0B9D0] p-4 text-black flex flex-col justify-between rounded-md">
+    <div className="fixed w-60 h-[650px] bg-[#B0B9D0] p-4 text-black flex flex-col justify-between rounded-md">
       {/* Upper Section */}
       <div>
         <h1 className="text-xl font-bold mb-4">Logo School</h1>
