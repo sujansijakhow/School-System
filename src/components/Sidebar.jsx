@@ -49,7 +49,7 @@ const Sidebar = () => {
         {/* Top row for mobile: Close icon + Logo */}
         <div className="md:hidden flex items-center justify-between mb-4">
           <h1 className="text-xl font-bold">Logo School</h1>
-          <IoMdClose size={20} onClick={toggleSidebar} className="cursor-pointer" />
+          <IoMdClose size={20} onClick={toggleSidebar} className="cursor-pointer rounded-full hover:bg-gray-300" />
         </div>
 
         {/* Title for desktop */}
