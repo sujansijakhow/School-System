@@ -25,7 +25,7 @@ const Sidebar = () => {
     <>
       {/* Hamburger icon (only on mobile, outside sidebar) */}
       <button
-        className="md:hidden fixed top-4 left-4 z-50 bg-[#7081C7] text-white p-2 rounded"
+        className="md:hidden fixed top-4 left-4 z-50 bg-[#7081C7] text-white p-2 rounded cursor-pointer"
         onClick={toggleSidebar}
       >
         <GiHamburgerMenu size={15} />
@@ -56,7 +56,8 @@ const Sidebar = () => {
         <h1 className="text-xl font-bold mb-4 hidden md:block">Logo School</h1>
 
         {/* Sidebar Content */}
-        <div className="h-full flex flex-col justify-between overflow-y-auto md:overflow-y-hidden">
+        <div className="h-full flex flex-col overflow-y-auto space-y-4 md:overflow-y-hidden ">
+
           <div>
             <ul className="flex flex-col space-y-1">
               <li className="flex items-center space-x-2 p-2 bg-[#7081C7] text-white rounded">
