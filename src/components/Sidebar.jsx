@@ -23,13 +23,15 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Hamburger icon (only on mobile, outside sidebar) */}
-      <button
-        className="md:hidden fixed top-4 left-4 z-50 bg-[#7081C7] text-white p-2 rounded cursor-pointer"
-        onClick={toggleSidebar}
-      >
-        <GiHamburgerMenu size={15} />
-      </button>
+      {/* Hamburger icon (only on mobile, outside sidebar and hidden when sidebar is open) */}
+      {!isOpen && (
+        <button
+          className="md:hidden fixed top-4 left-4 z-50 bg-[#7081C7] text-white p-2 rounded cursor-pointer"
+          onClick={toggleSidebar}
+        >
+          <GiHamburgerMenu size={15} />
+        </button>
+      )}
 
       {/* Mobile overlay */}
       {isOpen && (
@@ -45,19 +47,16 @@ const Sidebar = () => {
           ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:block`}
       >
         {/* Top row for mobile: Close icon + Logo */}
-        <div className="md:hidden flex items-center justify-end mb-6">
-          <div className="flex items-center space-x-6">
-            <h1 className="text-xl font-bold">Logo School</h1>
-            <IoMdClose size={20} onClick={toggleSidebar} className="cursor-pointer" />
-          </div>
+        <div className="md:hidden flex items-center justify-between mb-4">
+          <h1 className="text-xl font-bold">Logo School</h1>
+          <IoMdClose size={20} onClick={toggleSidebar} className="cursor-pointer" />
         </div>
 
         {/* Title for desktop */}
         <h1 className="text-xl font-bold mb-4 hidden md:block">Logo School</h1>
 
         {/* Sidebar Content */}
-        <div className="h-full flex flex-col overflow-y-auto space-y-4 md:overflow-y-hidden ">
-
+        <div className="h-full flex flex-col overflow-y-auto space-y-28 md:overflow-y-hidden">
           <div>
             <ul className="flex flex-col space-y-1">
               <li className="flex items-center space-x-2 p-2 bg-[#7081C7] text-white rounded">
