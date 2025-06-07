@@ -28,10 +28,10 @@ const Navbar = () => {
           </div>
 
         </div>
-        <div className='flex gap-3 md:gap-6'>
-          <Mail />
-          <Bell />
-          <User />
+        <div className='flex gap-3 md:gap-6 cursor-pointer'>
+          <Mail className='hover:text-[#7081C7]' />
+          <Bell className='hover:text-[#7081C7]'/>
+          <User className='hover:text-[#7081C7]'/>
         </div>
 
       </div>
