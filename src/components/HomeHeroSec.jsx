@@ -15,7 +15,7 @@ const HomeHeroSec = () => {
   ];
 
   return (
-    <div className='flex flex-col gap-4 p-4 w-[]'>
+    <div className='flex flex-col gap-4 w-[]'>
 
       {/* <div className='flex gap-34'>
         <div className='w-50 h-20 rounded-md bg-[#D9D9D9] flex items-center justify-center'>
@@ -31,12 +31,12 @@ const HomeHeroSec = () => {
           <p className>Total Earning</p>
         </div>
       </div> */}
-      <div className='flex gap-4'>
+      <div className='flex flex-col md:flex md:flex-row gap-4'>
         <EarningsChart />
         <EventCalendar />
 
       </div>
-      <div className='flex gap-4'>
+      <div className='flex flex-col md:flex-row gap-4'>
         <div className='flex flex-col gap-2 w-[500px] bg-[#D9D9D9] rounded-md p-4 pr-12'>
           <h1 className='font-semibold text-[18px]'>Top Performer</h1>
           <div className='flex gap-6'>
@@ -70,7 +70,7 @@ const HomeHeroSec = () => {
           })}
 
         </div>
-        <div className='flex flex-col gap-2 w-[700px] bg-[#D9D9D9] rounded-md p-6 pr-12 text-[]'><span className='font-bold'>Notice</span>
+        <div className='flex flex-col gap-2 w-[500px] md:w-[700px] bg-[#D9D9D9] rounded-md p-6 pr-12 text-[]'><span className='font-bold'>Notice</span>
           <div className='flex justify-between items-center mt-2'>
             <div className='flex items-center gap-6'>
               <div className='w-10 h-10 rounded-full bg-black'>
