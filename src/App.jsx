@@ -1,28 +1,22 @@
-import React, {  useState } from 'react'
+// App.jsx
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import HomeHeroSec from './components/HomeHeroSec';
+import Student from './components/Student';
 
-import Sidebar from './components/Sidebar'
-import Navbar from './components/Navbar'
-import HomeHeroSec from './components/HomeHeroSec'
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeHeroSec />
+  },
+  {
+    path: "/student",
+    element: <Student />
+  }
+]);
 
 function App() {
-
-  return (
-    <div className='bg-[#B0B9D0] p-10'>
-      <div className='bg-white flex p-5'>
-        <div className='flex'>
-
-          <Sidebar />
-          <div className='flex flex-col gap-4 ml-6 md:ml-57'>
-
-            <Navbar />
-            <HomeHeroSec />
-          </div>
-        </div>
-      </div>
-
-    </div>
-      
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
