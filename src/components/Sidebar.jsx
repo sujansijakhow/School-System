@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,10 +61,10 @@ const Sidebar = () => {
           <div>
             <ul className="flex flex-col space-y-1">
               <li className="flex items-center space-x-2 p-2 bg-[#7081C7] text-white rounded">
-                <FaTachometerAlt /> <span>Dashboard</span>
+                <FaTachometerAlt /> <Link to="/">Dashboard</Link>
               </li>
               <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded cursor-pointer">
-                <FaUserGraduate /> <span>Student</span>
+                <FaUserGraduate /> <Link to="/student">Student</Link>
               </li>
               <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded cursor-pointer">
                 <FaChalkboardTeacher /> <span>Teacher</span>
