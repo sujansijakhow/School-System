@@ -19,11 +19,11 @@ const HomeHeroSec = () => {
   return (
 
     <div className='bg-[#B0B9D0] p-10'>
-      <div className='bg-white flex p-5'>
+      <div className='bg-white flex p-2 md:p-5'>
         <div className='flex'>
 
           <Sidebar />
-          <div className='flex flex-col gap-4 ml-6 md:ml-57'>
+          <div className='flex flex-col gap-4 ml-2 md:ml-57'>
 
             <Navbar />
             <div className='flex flex-col gap-4 w-[]'>
