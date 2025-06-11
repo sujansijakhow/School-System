@@ -20,7 +20,7 @@ const data = [
 
 const EarningsChart = () => {
   return (
-    <div className="bg-[#D9D9D9] rounded-lg p-4 w-[500px]">
+    <div className="bg-[#D9D9D9] rounded-lg p-7 w-[500px]">
       <h2 className="text-lg font-semibold mb-4">Total Earning</h2>
       <ResponsiveContainer width="100%" height={200}>
         <BarChart data={data} barGap={0}>

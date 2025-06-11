@@ -34,7 +34,7 @@ const EventCalendar = () => {
 
   return (
     // <div className="flex justify-center items-start min-h-[400px] bg-gray-100 p-6">
-      <div className="bg-[#D9D9D9] rounded-xl w-[500px] md:w-[700px] h-[300px] p-4 flex flex-col md:flex-row gap-8">
+      <div className="bg-[#D9D9D9] rounded-lg w-[500px] md:w-[700px] h-[300px] p-4 flex flex-col md:flex-row gap-8">
         
         {/* Calendar Section */}
         <div className="flex-1">
