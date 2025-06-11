@@ -19,11 +19,9 @@ import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showStudentMenu, setShowStudentMenu] = useState(false);
   const location = useLocation();
 
   const toggleSidebar = () => setIsOpen(!isOpen);
-  const toggleStudentMenu = () => setShowStudentMenu(!showStudentMenu);
 
   const isActive = (path) => location.pathname === path;
   const isPrefix = (prefix) => location.pathname.startsWith(prefix);
@@ -64,130 +62,142 @@ const Sidebar = () => {
         <div className="h-full flex flex-col overflow-y-auto space-y-28 md:overflow-y-hidden">
           <div>
             <ul className="flex flex-col space-y-1">
-              <li
-                className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                  isActive("/") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                }`}
-              >
-                <FaTachometerAlt />
-                <Link to="/">Dashboard</Link>
+              <li>
+                <Link
+                  to="/"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
+                    isActive("/") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                  }`}
+                >
+                  <FaTachometerAlt />
+                  <span>Dashboard</span>
+                </Link>
               </li>
 
-              {/* Toggleable Student Section */}
-              <li
-                className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                  isPrefix("/student") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                }`}
-                onClick={toggleStudentMenu}
-              >
-                <FaUserGraduate />
-                <span>Student</span>
+              <li>
+                <Link
+                  to="/student"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
+                    isPrefix("/student") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                  }`}
+                >
+                  <FaUserGraduate />
+                  <span>Student</span>
+                </Link>
               </li>
 
-              {showStudentMenu && (
-                <ul className="ml-8 text-sm space-y-1 mt-1">
-                  <li
-                    className={`p-1 rounded ${
-                      isActive("/student/add") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                    }`}
-                  >
-                    <Link to="/student/add">Add New Student</Link>
-                  </li>
-                  <li
-                    className={`p-1 rounded ${
-                      isActive("/student/list") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                    }`}
-                  >
-                    <Link to="/student/list">Student List</Link>
-                  </li>
-                </ul>
-              )}
-
-              <li
-                className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                  isPrefix("/teacher") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                }`}
-              >
-                <FaChalkboardTeacher />
-                <Link to="/teacher">Teacher</Link>
+              <li>
+                <Link
+                  to="/teacher"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
+                    isPrefix("/teacher") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                  }`}
+                >
+                  <FaChalkboardTeacher />
+                  <span>Teacher</span>
+                </Link>
               </li>
 
-              <li
-                className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                  isPrefix("/attendance") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                }`}
-              >
-                <FaUserCheck />
-                <Link to="/attendance">Attendance</Link>
+              <li>
+                <Link
+                  to="/attendance"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
+                    isPrefix("/attendance") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                  }`}
+                >
+                  <FaUserCheck />
+                  <span>Attendance</span>
+                </Link>
               </li>
 
-              <li
-                className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                  isPrefix("/notice") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                }`}
-              >
-                <FaClipboardList />
-                <Link to="/notice">Notice</Link>
+              <li>
+                <Link
+                  to="/notice"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
+                    isPrefix("/notice") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                  }`}
+                >
+                  <FaClipboardList />
+                  <span>Notice</span>
+                </Link>
               </li>
 
-              <li
-                className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                  isPrefix("/events") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                }`}
-              >
-                <FaCalendarAlt />
-                <Link to="/events">Events</Link>
+              <li>
+                <Link
+                  to="/events"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
+                    isPrefix("/events") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                  }`}
+                >
+                  <FaCalendarAlt />
+                  <span>Events</span>
+                </Link>
               </li>
 
-              <li
-                className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                  isPrefix("/help") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                }`}
-              >
-                <FaInfoCircle />
-                <Link to="/help">Help Center</Link>
+              <li>
+                <Link
+                  to="/help"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
+                    isPrefix("/help") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                  }`}
+                >
+                  <FaInfoCircle />
+                  <span>Help Center</span>
+                </Link>
               </li>
 
-              <li
-                className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                  isPrefix("/exam") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                }`}
-              >
-                <FaBookOpen />
-                <Link to="/exam">Exam</Link>
+              <li>
+                <Link
+                  to="/exam"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
+                    isPrefix("/exam") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                  }`}
+                >
+                  <FaBookOpen />
+                  <span>Exam</span>
+                </Link>
               </li>
 
-              <li
-                className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                  isPrefix("/payment") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                }`}
-              >
-                <FaMoneyBill />
-                <Link to="/payment">Payment</Link>
+              <li>
+                <Link
+                  to="/payment"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
+                    isPrefix("/payment") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                  }`}
+                >
+                  <FaMoneyBill />
+                  <span>Payment</span>
+                </Link>
               </li>
 
-              <li
-                className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                  isPrefix("/class") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                }`}
-              >
-                <FaUsers />
-                <Link to="/class">Class</Link>
+              <li>
+                <Link
+                  to="/class"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
+                    isPrefix("/class") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                  }`}
+                >
+                  <FaUsers />
+                  <span>Class</span>
+                </Link>
               </li>
             </ul>
           </div>
 
           <div className="mt-4">
             <ul className="space-y-2">
-              <li
-                className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                  isPrefix("/setting") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                }`}
-              >
-                <FaCogs />
-                <Link to="/setting">Setting</Link>
+              <li>
+                <Link
+                  to="/setting"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
+                    isPrefix("/setting") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                  }`}
+                >
+                  <FaCogs />
+                  <span>Setting</span>
+                </Link>
               </li>
-              <li className="flex items-center space-x-2 p-2 text-red-500 hover:bg-gray-200 rounded cursor-pointer">
+              <li className="flex items-center space-x-2 p-2 text-red-500 hover:bg-gray-200 rounded cursor-pointer cursor-pointer">
                 <FaSignOutAlt />
                 <span>Logout</span>
               </li>
@@ -196,7 +206,7 @@ const Sidebar = () => {
         </div>
       </div>
     </>
-  );    
+  );
 };
 
 export default Sidebar;
