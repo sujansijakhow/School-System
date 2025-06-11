@@ -26,7 +26,7 @@ const HomeHeroSec = () => {
           <div className='flex flex-col gap-4 ml-2 md:ml-57'>
 
             <Navbar />
-            <div className='flex flex-col gap-4 w-[]'>
+            <div className='flex flex-col items-center gap-4 w-[]'>
 
               {/* <div className='flex gap-34'>
         <div className='w-50 h-20 rounded-md bg-[#D9D9D9] flex items-center justify-center'>
@@ -42,7 +42,7 @@ const HomeHeroSec = () => {
           <p className>Total Earning</p>
         </div>
       </div> */}
-              <div className='flex flex-col md:flex md:flex-row gap-4'>
+              <div className='flex flex-col items-center md:flex md:flex-row gap-4'>
                 <EarningsChart />
                 <EventCalendar />
 
