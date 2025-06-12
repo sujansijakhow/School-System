@@ -25,7 +25,7 @@ const HomeHeroSec = () => {
           <Sidebar />
           <div className='flex flex-col gap-4 ml-2 md:ml-57'>
 
-            <Navbar />
+            <Navbar name={"Dashboard"} />
             <div className='flex flex-col items-center gap-4 w-[]'>
 
               {/* <div className='flex gap-34'>
