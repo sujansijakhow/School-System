@@ -11,7 +11,7 @@ const Student = () => {
         <div className='flex ml-2 md:ml-57'>
           <Sidebar />
           <div className='flex flex-col gap-3'>
-            <Navbar />
+            <Navbar name={"Student"} />
             <div className='h-full w-full flex flex-col gap-4 rounded-md px-8 py-4 bg-[#D9D9D9]'>
               <div className='font-bold flex flex-col gap-1'>
                 <h1>Add new Student</h1>
