@@ -76,6 +76,9 @@ const Teacher = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className='hidden md:block md:h-15'>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
