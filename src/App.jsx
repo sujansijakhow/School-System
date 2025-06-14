@@ -1,10 +1,11 @@
 // App.jsx
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import HomeHeroSec from './components/HomeHeroSec';
-import Student from './components/Student';
-import Teacher from './components/Teacher';
-import Attendance from './components/Attendance';
+import HomeHeroSec from './routes/HomeHeroSec';
+import Student from './routes/Student';
+import Teacher from './routes/Teacher';
+import Attendance from './routes/Attendance';
+import Class from './routes/Class';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/attendance",
     element: <Attendance />
+  },
+  {
+    path: "/class",
+    element: <Class />
   }
 ]);
 
