@@ -65,9 +65,8 @@ const Sidebar = () => {
               <li>
                 <Link
                   to="/"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                    isActive("/") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                  }`}
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isActive("/") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                    }`}
                 >
                   <FaTachometerAlt />
                   <span>Dashboard</span>
@@ -77,9 +76,8 @@ const Sidebar = () => {
               <li>
                 <Link
                   to="/student"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                    isPrefix("/student") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                  }`}
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/student") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                    }`}
                 >
                   <FaUserGraduate />
                   <span>Student</span>
@@ -89,9 +87,8 @@ const Sidebar = () => {
               <li>
                 <Link
                   to="/teacher"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                    isPrefix("/teacher") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                  }`}
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/teacher") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                    }`}
                 >
                   <FaChalkboardTeacher />
                   <span>Teacher</span>
@@ -101,9 +98,8 @@ const Sidebar = () => {
               <li>
                 <Link
                   to="/attendance"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                    isPrefix("/attendance") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                  }`}
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/attendance") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                    }`}
                 >
                   <FaUserCheck />
                   <span>Attendance</span>
@@ -112,10 +108,20 @@ const Sidebar = () => {
 
               <li>
                 <Link
+                  to="/class"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/class") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                    }`}
+                >
+                  <FaUsers />
+                  <span>Class</span>
+                </Link>
+              </li>
+
+              <li>
+                <Link
                   to="/notice"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                    isPrefix("/notice") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                  }`}
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/notice") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                    }`}
                 >
                   <FaClipboardList />
                   <span>Notice</span>
@@ -125,9 +131,8 @@ const Sidebar = () => {
               <li>
                 <Link
                   to="/events"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                    isPrefix("/events") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                  }`}
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/events") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                    }`}
                 >
                   <FaCalendarAlt />
                   <span>Events</span>
@@ -137,9 +142,8 @@ const Sidebar = () => {
               <li>
                 <Link
                   to="/help"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                    isPrefix("/help") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                  }`}
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/help") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                    }`}
                 >
                   <FaInfoCircle />
                   <span>Help Center</span>
@@ -149,9 +153,8 @@ const Sidebar = () => {
               <li>
                 <Link
                   to="/exam"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                    isPrefix("/exam") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                  }`}
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/exam") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                    }`}
                 >
                   <FaBookOpen />
                   <span>Exam</span>
@@ -161,26 +164,15 @@ const Sidebar = () => {
               <li>
                 <Link
                   to="/payment"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                    isPrefix("/payment") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                  }`}
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/payment") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                    }`}
                 >
                   <FaMoneyBill />
                   <span>Payment</span>
                 </Link>
               </li>
 
-              <li>
-                <Link
-                  to="/class"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                    isPrefix("/class") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                  }`}
-                >
-                  <FaUsers />
-                  <span>Class</span>
-                </Link>
-              </li>
+
             </ul>
           </div>
 
@@ -189,9 +181,8 @@ const Sidebar = () => {
               <li>
                 <Link
                   to="/setting"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${
-                    isPrefix("/setting") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                  }`}
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/setting") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                    }`}
                 >
                   <FaCogs />
                   <span>Setting</span>
