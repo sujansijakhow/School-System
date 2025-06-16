@@ -6,6 +6,7 @@ import Student from './routes/Student';
 import Teacher from './routes/Teacher';
 import Attendance from './routes/Attendance';
 import Class from './routes/Class';
+import Notice from './routes/Notice';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/class",
     element: <Class />
+  },
+  {
+    path: "/notice",
+    element: <Notice />
   }
 ]);
 
