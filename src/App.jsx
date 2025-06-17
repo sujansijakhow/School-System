@@ -7,6 +7,7 @@ import Teacher from './routes/Teacher';
 import Attendance from './routes/Attendance';
 import Class from './routes/Class';
 import Notice from './routes/Notice';
+import Event from './routes/Event';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/notice",
     element: <Notice />
+  },
+  {
+    path: "/events",
+    element: <Event />
   }
 ]);
 
