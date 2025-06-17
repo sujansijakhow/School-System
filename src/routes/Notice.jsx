@@ -50,8 +50,24 @@ const Notice = () => {
                                 </div>
 
                             </div>
-                            <div className='bg-[#D9D9D9] h-[100px] w-[40%] p-4 rounded-md'>
+                            <div className='bg-[#D9D9D9] h-auto w-[40%] p-4 rounded-md flex flex-col gap-4'>
                                 <h1 className='font-bold text-xl'>Updates</h1>
+                                <div className='flex flex-col gap-1 items-center'>
+                                    <img src="/notice1.jpg" alt=" Notice 1" width={250} height={250} className='rounded-md' />
+                                    <div className='flex flex-col items-center text-sm font-medium bg-amber-50 p-1 rounded-sm'>
+
+                                        <span>Welcome back to the lecturer who went to the America</span>
+                                        <span>For Techonology Exhibition.👨‍💻</span>
+                                    </div>
+                                </div>
+                                <div className='flex flex-col gap-1 items-center'>
+                                    <img src="/notice2.jpeg" alt=" Notice 1" width={250} height={250} className='rounded-md' />
+                                    <div className='flex flex-col items-center text-sm font-medium bg-amber-50 p-1 rounded-sm'>
+
+                                        <span>Sports day is coming soon encompassing a lot of games.</span>
+                                        <span>Date will out soon.🎈</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
