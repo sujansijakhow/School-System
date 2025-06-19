@@ -137,8 +137,8 @@ const Sidebar = () => {
                   <FaCalendarAlt />
                   <span>Events</span>
                 </Link>
-              </li>
-              
+              </li> 
+
               <li>
                 <Link
                   to="/exam"
