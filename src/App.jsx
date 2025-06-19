@@ -8,6 +8,7 @@ import Attendance from './routes/Attendance';
 import Class from './routes/Class';
 import Notice from './routes/Notice';
 import Event from './routes/Event';
+import Exam from './routes/Exam';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/events",
     element: <Event />
+  },
+  {
+    path: "/exam",
+    element: <Exam />
   }
 ]);
 
