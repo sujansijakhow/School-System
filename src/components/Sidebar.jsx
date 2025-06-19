@@ -138,18 +138,7 @@ const Sidebar = () => {
                   <span>Events</span>
                 </Link>
               </li>
-
-              <li>
-                <Link
-                  to="/help"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/help") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
-                    }`}
-                >
-                  <FaInfoCircle />
-                  <span>Help Center</span>
-                </Link>
-              </li>
-
+              
               <li>
                 <Link
                   to="/exam"
@@ -171,6 +160,18 @@ const Sidebar = () => {
                   <span>Payment</span>
                 </Link>
               </li>
+
+              <li>
+                <Link
+                  to="/help"
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/help") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+                    }`}
+                >
+                  <FaInfoCircle />
+                  <span>Help Center</span>
+                </Link>
+              </li>
+
 
 
             </ul>
