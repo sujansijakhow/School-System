@@ -107,7 +107,7 @@ const Exam = () => {
                     <Sidebar />
                     <div className='flex flex-col gap-4 ml-2 md:ml-57'>
 
-                        <Navbar name={"Notice"} />
+                        <Navbar name={"Exam"} />
                         <div className='w-full bg-white flex gap-4'>
                             <div className='w-1/4 bg-[#D9D9D9] h-[525px] rounded-md flex flex-col gap-4 p-4'>
                                 <h1 className='font-bold text-md'>Add new Exam</h1>
