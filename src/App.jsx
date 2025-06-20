@@ -9,6 +9,7 @@ import Class from './routes/Class';
 import Notice from './routes/Notice';
 import Event from './routes/Event';
 import Exam from './routes/Exam';
+import Payment from './routes/Payment';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/exam",
     element: <Exam />
+  },
+  {
+    path: "/payment",
+    element: <Payment />
   }
 ]);
 
