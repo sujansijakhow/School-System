@@ -10,6 +10,7 @@ import Notice from './routes/Notice';
 import Event from './routes/Event';
 import Exam from './routes/Exam';
 import Payment from './routes/Payment';
+import Help from './routes/Help';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: "/payment",
     element: <Payment />
+  },
+  {
+    path: "/help",
+    element: <Help />
   }
 ]);
 
