@@ -25,6 +25,9 @@ const Sidebar = () => {
 
   const isActive = (path) => location.pathname === path;
   const isPrefix = (prefix) => location.pathname.startsWith(prefix);
+  const [showSettings, setShowSettings] = useState(false);
+  const [showSettingPopup, setShowSettingPopup] = useState(false);
+
 
   return (
     <>
@@ -137,7 +140,7 @@ const Sidebar = () => {
                   <FaCalendarAlt />
                   <span>Events</span>
                 </Link>
-              </li> 
+              </li>
 
               <li>
                 <Link
@@ -179,16 +182,42 @@ const Sidebar = () => {
 
           <div className="mt-4">
             <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/setting"
-                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer ${isPrefix("/setting") ? "bg-[#7081C7] text-white" : "hover:bg-gray-200"
+              <div className="relative">
+                <button
+                  onClick={() => setShowSettingPopup(!showSettingPopup)}
+                  className={`flex items-center space-x-2 p-2 rounded cursor-pointer hover:bg-gray-200 w-full ${showSettingPopup ? "bg-[#7081C7] text-white" : ""
                     }`}
                 >
                   <FaCogs />
                   <span>Setting</span>
-                </Link>
-              </li>
+                </button>
+
+                {showSettingPopup && (
+                  <div className="absolute bottom-12 left-0 bg-white border rounded shadow-lg w-56 z-50">
+                    <div className="flex justify-between items-center px-3 py-2 border-b">
+                      <span className="text-sm font-semibold">Settings</span>
+                      <button
+                        onClick={() => setShowSettingPopup(false)}
+                        className="text-gray-500 hover:text-black"
+                      >
+                        <IoMdClose size={20} className="cursor-pointer pr-2" />
+                      </button>
+                    </div>
+
+                    <ul className="text-sm">
+                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                        Profile Settings
+                      </li>
+                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                        Theme Settings
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+
+
               <li className="flex items-center space-x-2 p-2 text-red-500 hover:bg-gray-200 rounded cursor-pointer cursor-pointer">
                 <FaSignOutAlt />
                 <span>Logout</span>
@@ -199,6 +228,8 @@ const Sidebar = () => {
       </div>
     </>
   );
+
+
 };
 
 export default Sidebar;
