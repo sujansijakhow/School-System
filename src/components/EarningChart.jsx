@@ -28,6 +28,9 @@ const EarningsChart = () => {
           <YAxis tickFormatter={(value) => `${value / 1000}k`} />
           <Tooltip formatter={(value) => `Rs. ${value}`} />
           <Legend />
+
+          {/* data bar */}
+          
           <Bar dataKey="Earning" fill="#006400" />
           <Bar dataKey="Expenses" fill="#8B0000" />
         </BarChart>
